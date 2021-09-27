@@ -1,0 +1,30 @@
+<div>
+    <label for="new-resident">Resident Name: </label>
+    <input id="new-resident" #residentName />
+    <button class="add-button" (click)="add(residentName.value); residentName.value=''">
+      Add Resident
+    </button>
+  </div>
+
+<h2>My Residents</h2>
+
+<div class="no-results" *ngIf="residents.length === 0">
+    <h2>No Residents Created!</h2>
+</div>
+
+<div class="residents">
+    <div class="resident-flex-wrapper" *ngFor="let resident of residents">
+        <div class="resident">
+            <a routerLink="/detail/{{ resident.id }}">
+                <span class="badge">
+                    {{ resident.id }}
+                </span> 
+                <span>{{ resident.name }}</span>
+            </a>
+            <button class="delete" title="Delete Reside"
+                (click)="delete(resident)">
+                X
+            </button>
+        </div>
+    </div>
+</div>

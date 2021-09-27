@@ -1,0 +1,14 @@
+<div class="message-wrapper" [ngClass]="{'expanded' : isExpanded}" >
+
+    <h2 (click)="toggleVisibility()">
+        Messages
+        <span class="message-count">({{ messageSvc.messages.length }})</span>
+        <button *ngIf="isExpanded" class="clear" (click)="messageSvc.clear()">
+            X
+        </button>
+    </h2>
+
+    <div *ngIf="messageSvc.messages.length > 0 && isExpanded" class="messages">
+        <div *ngFor="let msg of messageSvc.messages">{{ msg }}</div>
+    </div>
+</div>

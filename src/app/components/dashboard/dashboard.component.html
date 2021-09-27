@@ -1,0 +1,9 @@
+<app-resident-search></app-resident-search>
+
+<div class="residents-menu">
+    <app-resident-tile 
+        *ngFor="let res of residents" 
+        [resident]="res">
+    </app-resident-tile>
+</div>
+

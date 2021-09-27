@@ -1,0 +1,93 @@
+@import "../../../variables.scss";
+
+.residents {
+  display: flex;
+  flex-wrap: wrap;
+
+  .resident-flex-wrapper {
+    flex: 0 0 33%;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+
+  .resident {
+    position: relative;
+    color: $white;
+    text-decoration: none;
+    background-color: $light-green;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-self: normal;
+      width: 100%;
+      color: $white;
+      text-decoration: none;
+
+      span {
+        padding-top: .5rem;
+      }
+
+      .badge {
+        color: $white;
+        padding-left: .8rem;
+        padding-right: .8rem;
+        background-color: darken($light-green, 10%);
+        text-align: right;
+        margin-right: 0.8em;
+        border-radius: 4px 0 0 4px;
+      }
+
+      &:hover {
+        color: #2c3a41;
+        background-color: #e6e6e6;
+        cursor: pointer;
+      }
+
+      &:active {
+        background-color: #525252;
+        color: #fafafa;
+      }
+    }
+
+    button.delete {
+      background-color: transparent;
+      color: $white;
+      margin: 0;
+      display: inline-block;
+      border: none;
+
+      &hover {
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
+.add-button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.add-button:hover {
+  color: white;
+  background-color: #42545c;
+}
+
+.no-results {
+  text-align: center;
+  padding: 2rem;
+}

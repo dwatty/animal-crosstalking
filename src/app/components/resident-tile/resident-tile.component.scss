@@ -1,0 +1,41 @@
+@import '../../../variables.scss';  
+
+a {
+    border: 1px solid $light_green;
+    border-radius: .8rem;
+    padding: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    color: $light_green;
+    text-align: center;
+    width: 33%;
+    min-width: 10rem;
+    margin: .5rem auto;
+    box-sizing: border-box;  
+    /* flexbox */
+    justify-content: center;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    align-items: center;
+    transition: all .3s linear;
+
+    img {
+        height: 2rem;
+    }
+
+}
+  
+@media (min-width: 600px) {
+    a {
+        width: 18%;
+        box-sizing: content-box;
+    }
+}
+
+a:hover {
+    background-color: $light_green;
+    color: $white;
+}
+
