@@ -1,0 +1,18 @@
+<div id="search-component">
+    
+    <input 
+        #searchBox 
+        id="search-box" 
+        autocomplete="off"
+        (input)="search(searchBox.value)" 
+        placeholder="Find a Resident" 
+    />
+
+    <ul class="search-result">
+        <li *ngFor="let resident of residents$ | async">
+            <a routerLink="/detail/{{ resident.id }}">
+                {{ resident.name }}
+            </a>
+        </li>
+    </ul>
+</div>

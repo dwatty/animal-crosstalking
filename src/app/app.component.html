@@ -1,0 +1,12 @@
+<header>
+    <img src="/assets/images/acnh_logo.png" alt="{{ title }}" />
+</header>
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/residents">Residents</a>
+    <a routerLink="/settings">Settings</a>
+</nav>
+<div class="app-wrapper">
+    <router-outlet></router-outlet>
+</div>
+<app-messages></app-messages>
