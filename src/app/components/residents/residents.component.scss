@@ -42,14 +42,14 @@
       }
 
       &:hover {
-        color: #2c3a41;
-        background-color: #e6e6e6;
+        color: $white;
+        background-color: darken($light-green, 10%);
         cursor: pointer;
       }
 
       &:active {
-        background-color: #525252;
-        color: #fafafa;
+        background-color: darken($light-green, 10%);
+        color: $white;
       }
     }
 

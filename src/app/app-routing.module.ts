@@ -7,10 +7,10 @@ import { SettingsComponent } from './components/settings/settings.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dasboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'residents', component: ResidentsComponent },
-  { path: 'detail/:id', component: ResidentDetailComponent },
-  { path: 'settings', component: SettingsComponent }
+  { path: 'dashboard', component: DashboardComponent, data: {animation: 'DashboardPageAnimation'} },
+  { path: 'residents', component: ResidentsComponent, data: {animation: 'ResidentsPageAnimation'} },
+  { path: 'detail/:id', component: ResidentDetailComponent, data: {animation: 'DetailPageAnimation'} },
+  { path: 'settings', component: SettingsComponent, data: {animation: 'SettingsPageAnimation'} }
 ];
 
 @NgModule({
