@@ -1,4 +1,4 @@
-<div class="message-wrapper" [ngClass]="{'expanded' : isExpanded}" >
+<div class="message-wrapper" [@openClose]="isExpanded ? 'open' : 'closed'" >
 
     <h2 (click)="toggleVisibility()">
         Messages

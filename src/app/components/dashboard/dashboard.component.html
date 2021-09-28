@@ -1,8 +1,8 @@
 <app-resident-search></app-resident-search>
 
-<div class="residents-menu">
+<div class="residents-menu" [@fadeInTrigger]="residents.length">
     <app-resident-tile 
-        *ngFor="let res of residents" 
+        *ngFor="let res of residents"         
         [resident]="res">
     </app-resident-tile>
 </div>

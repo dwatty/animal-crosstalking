@@ -6,7 +6,7 @@
     <a routerLink="/residents">Residents</a>
     <a routerLink="/settings">Settings</a>
 </nav>
-<div class="app-wrapper">
-    <router-outlet></router-outlet>
-</div>
+<div class="app-wrapper" [@routeAnimations]="o.isActivated ? o.activatedRoute : ''">
+    <router-outlet #o="outlet"></router-outlet>
+  </div>
 <app-messages></app-messages>
