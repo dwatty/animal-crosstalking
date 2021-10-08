@@ -1,0 +1,9 @@
+@import '../../../variables.scss';
+
+h2 {
+    border-bottom: .1rem solid $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

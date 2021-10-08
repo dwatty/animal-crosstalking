@@ -1,3 +1,32 @@
+@import '../../../variables.scss';
+
+.detail-wrapper {
+    display: flex;
+
+    > div {
+        flex: 1;
+    }
+}
+
 h2 {
     font-size: 4rem;
+}
+
+img {
+    height: 8rem;
+    margin: 0 2rem 0 0;
+}
+
+.page-actions {
+    padding: 2rem;
+    text-align: center;
+}
+
+.note-item {
+    background-color: $light-grey;
+    bordeR: .1rem solid $grey;
+    border-radius: .4rem;
+    display: inline-block;
+    padding: .2rem .4rem;
+    margin-right: .8rem;
 }

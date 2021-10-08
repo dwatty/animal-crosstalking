@@ -1,0 +1,61 @@
+@import '../../../variables.scss';
+
+h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.5rem;
+    justify-content: space-between;
+
+    button {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        background-color: $light-green;
+        color: $white;
+        border: none;
+
+        &:disabled{
+            background-color: $light-grey;
+            color: $black;
+
+            &:hover {
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+.form-group {
+    display: inline-flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 0.4rem 1rem .4rem 0;
+
+    label {
+        padding: 0 0 .2rem 0;
+        font-weight: bold;
+    }
+
+    input, select { 
+        border-radius: .4rem;
+        border: 1px solid #333;
+        padding: .2rem .4rem;
+    }
+}
+
+.action-buttons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 2rem;
+
+    button {
+        display: inline-block;
+    }
+}
+
+.add-button {
+ 
+}
