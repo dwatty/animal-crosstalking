@@ -1,12 +1,9 @@
-<div>
-    <label for="new-resident">Resident Name: </label>
-    <input id="new-resident" #residentName />
-    <button class="add-button" (click)="add(residentName.value); residentName.value=''">
-      Add Resident
-    </button>
-  </div>
 
-<h2>My Residents</h2>
+
+<h2>
+    My Residents
+    <button (click)="openSheet()">+</button>
+</h2>
 
 <div class="no-results" *ngIf="residents.length === 0">
     <h2>No Residents Created!</h2>

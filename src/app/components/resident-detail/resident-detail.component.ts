@@ -13,6 +13,7 @@ export class ResidentDetailComponent implements OnInit {
 
   resident? : Resident;
   residentName? : string;
+  residentAvatar? : string;
 
   constructor(
     private residentSvc : ResidentService,
@@ -28,13 +29,14 @@ export class ResidentDetailComponent implements OnInit {
       const rID = Number(this.route.snapshot.paramMap.get('id'));
       this.residentSvc.getResident(rID).subscribe(resident => {
         this.resident = resident;
-        this.residentName = resident.name
+        this.residentName = resident.name;
+        this.residentAvatar = resident.avatar;
       });
   }
 
-  save() {
-    if(this.resident) {
-      this.residentSvc.updateResident(this.resident).subscribe(resident => 
+  save(event : Resident) {
+    if(event) {
+      this.residentSvc.updateResident(event).subscribe(resident => 
         this.goBack()
       );
     }

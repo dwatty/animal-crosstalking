@@ -1,5 +1,11 @@
 
 <a *ngIf="resident" routerLink="/detail/{{resident.id}}">
-    <img src="/assets/images/acnh_leaf.png" alt="Leaf Logo" />
+    <img 
+        class="avatar-img" 
+        src="/assets/images/{{resident.avatar}}.png" 
+        alt="Avatar Image" 
+    />
+
     {{ resident.name }}
+    
 </a>

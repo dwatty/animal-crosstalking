@@ -1,0 +1,58 @@
+<form [formGroup]="residentForm" (ngSubmit)="save()">
+  <div class="form-group">
+    <label for="resident-name">Resident Name: </label>
+    <input id="resident-name" type="text" formControlName="name" />
+  </div>
+
+  <div class="form-group">
+    <label for="resident-avatar">Avatar: </label>
+    <select name="resident-avatar" [compareWith]="compareFn" formControlName="avatar">
+      <option *ngFor="let av of avatarOpts" [ngValue]="av.value">
+        {{ av.name }}
+      </option>
+    </select>
+  </div>
+
+  <div formGroupName="description">
+    <div class="form-group">
+      <label form="resident-desc-animal">Animal: </label>
+      <input id="resident-desc-animal" type="text" formControlName="animal" />
+    </div>
+
+    <div class="form-group">
+      <label form="resident-desc-personality">Personality: </label>
+      <input
+        id="resident-desc-personality"
+        type="text"
+        formControlName="personality"
+      />
+    </div>
+  </div>
+
+  <div formArrayName="notes">
+    <h3>
+      Notes
+      <button type="button" (click)="addNote()">+</button>
+    </h3>
+
+    <div class="form-group" *ngFor="let note of notes.controls; let i = index">
+      <label for="note-{{ i }}">Note:</label>
+      <input id="note-{{ i }}" type="text" [formControlName]="i" />
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <button type="submit" class="add-button" [disabled]="!residentForm.valid">
+      Save
+    </button>
+    <button
+      *ngIf="cancelText.length > 0"
+      (click)="cancel()"
+      type="button"
+      class="add-button"
+      [disabled]="!residentForm.valid"
+    >
+      {{ cancelText }}
+    </button>
+  </div>
+</form>

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Resident } from 'src/app/interfaces/resident';
 import { ResidentService } from 'src/app/services/resident.service';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { ResidentAddComponent } from '../resident-add/resident-add.component';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-residents',
@@ -11,7 +14,10 @@ export class ResidentsComponent implements OnInit {
 
   residents: Resident[] = [];
 
-  constructor(private residentSvc : ResidentService) { }
+  constructor(
+    private residentSvc : ResidentService,
+    private bottomSheet : MatBottomSheet
+  ) { }
 
   ngOnInit(): void {
     this.getResidents();
@@ -25,27 +31,20 @@ export class ResidentsComponent implements OnInit {
         );
   }
 
-  // Button Handler for Adding a Resident
-  add(name : string) : void {
-    name = name.trim();
-    if(!name) {
-      return;
-    }
-
-    const tmp = { name: name } as Resident;
-
-    this.residentSvc.createResident(tmp).subscribe(resident =>
-      this.residents.push(resident)
-    );
-
-  }
-
   // Button Handler for Deleting a Resident
   delete(resident : Resident) : void {
     this.residentSvc.deleteResident(resident.id).subscribe(result =>
       this.residents = this.residents.filter(r => r.id != resident.id)
     );
 
+  }
+
+  openSheet() : void {
+    this.bottomSheet.open(ResidentAddComponent).afterDismissed().subscribe(resident => {
+      if(resident) {
+        this.residents.push(resident)  
+      }
+    })
   }
 
 }

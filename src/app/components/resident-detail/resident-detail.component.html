@@ -1,11 +1,16 @@
 <div *ngIf="resident">
-    <h2>{{ residentName | uppercase }} ({{ resident.id }}) </h2>
-    
-    <div>
-        <label for="resident-name">Resident Name:</label>
-        <input type="text" id="resident-name" [(ngModel)]="resident.name" placeholder="Name" />
-    </div>
+    <div class="detail-wrapper">
+        <img src="/assets/images/{{residentAvatar}}.png"/>    
+        <div>
+            <h2>{{ residentName | uppercase }} ({{ resident.id }}) </h2>     
+            
+            <app-resident-edit 
+                [resident]="resident"
+                (onSave)="save($event)"
+                (onCancel)="goBack()" 
+                cancelText="Go Back">
+            </app-resident-edit>
 
-    <button (click)="save()">Save</button>
-    <button (click)="goBack()">Go Back</button>
+        </div>
+    </div>
 </div>

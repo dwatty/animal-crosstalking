@@ -2,43 +2,108 @@
   "residents": [
     {
       "id": 11,
-      "name": "Bandit"
+      "name": "Bandit",
+      "avatar": "animal_bear",
+      "description": {
+        "animal": "Human",
+        "personality": "Quirky"
+      },
+      "notes": [
+        "Fisherman",
+        "Cat ears"
+      ]
     },
     {
       "id": 12,
-      "name": "Rita"
+      "name": "Rita",
+      "avatar": "animal_cow",
+      "description": {
+        "animal": "Human",
+        "personality": "Quirky"
+      },
+      "notes": []
     },
     {
       "id": 13,
-      "name": "Rainbow Dash"
+      "name": "Rainbow Dash",
+      "avatar": "animal_koala",
+      "description": {
+        "animal": "Unicorn",
+        "personality": "Quirky"
+      },
+      "notes": []
     },
     {
       "id": 14,
-      "name": "Cyborg"
+      "name": "Cyborg",
+      "avatar": "animal_wolf",
+      "description": {
+        "animal": "Robot",
+        "personality": "Quirky"
+      },
+      "notes": []
     },
     {
       "id": 15,
-      "name": "Pashmina"
+      "name": "Pashmina",
+      "avatar": "animal_koala",
+      "description": {
+        "animal": "Gazelle",
+        "personality": "Jokey"
+      },
+      "notes": []
     },
     {
       "id": 16,
-      "name": "Antonio"
+      "name": "Antonio",
+      "avatar": "animal_penguin",
+      "description": {
+        "animal": "Anteater",
+        "personality": "Exercisey"
+      },
+      "notes": []
     },
     {
       "id": 17,
-      "name": "Batman"
+      "name": "Batman",
+      "avatar": "animal_koala",
+      "description": {
+        "animal": "Bat",
+        "personality": "Secretive"
+      },
+      "notes": []
     },
     {
       "id": 18,
-      "name": "Flounder"
+      "name": "Flounder",
+      "avatar": "animal_wolf",
+      "description": {
+        "animal": "Fish",
+        "personality": "Energetic"
+      },
+      "notes": [
+        "Ariel's friend"
+      ]
     },
     {
       "id": 19,
-      "name": "Nightwing"
+      "name": "Nightwing",
+      "avatar": "animal_cow",
+      "description": {
+        "animal": "Bat",
+        "personality": "Wild"
+      },
+      "notes": []
     },
     {
+      "id": 20,
       "name": "Alfonso",
-      "id": 20
+      "avatar": "animal_bear",
+      "description": {
+        "animal": "Alligator",
+        "personality": "Worrier"
+      },
+      "notes": []
     }
   ]
 }
