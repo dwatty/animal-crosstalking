@@ -6,7 +6,7 @@ import { ResidentsComponent } from './components/residents/residents.component';
 import { SettingsComponent } from './components/settings/settings.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dasboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent, data: {animation: 'DashboardPageAnimation'} },
   { path: 'residents', component: ResidentsComponent, data: {animation: 'ResidentsPageAnimation'} },
   { path: 'detail/:id', component: ResidentDetailComponent, data: {animation: 'DetailPageAnimation'} },
