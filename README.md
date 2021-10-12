@@ -9,3 +9,7 @@ Run the Mock JSON server for handling the resident API requests.
 ```
 npm run mockApi
 ```
+
+## Demo
+https://user-images.githubusercontent.com/7440845/136895936-2ae6f004-fcdb-40a4-a637-afa75d275fb6.mp4
+
